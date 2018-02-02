@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -41,6 +41,11 @@
 
 			<%-- <form:errors path="student1.*" /> --%>
 
+			<p>
+				<i><b><spring:message code="label.studentRollNo" /></b></i><br>
+				<input id="rcorners1" size="35" type="text" name="studentRollNo" /> <br>
+				<form:errors path="student1.studentRollNo" cssClass="error" />
+			</p>
 
 			<p>
 				<i><b><spring:message code="label.studentName" /></b></i><br>
@@ -80,24 +85,21 @@
 			<p>
 				<i><spring:message code="label.country" /></i><input id="rcorners2"
 					size="15" type="text" name="studentAddress.country" />
-					
-				<%-- <form:errors path="student1.studentAddress.country" cssClass="error" /> --%>
-					 <i><spring:message
-						code="label.city" /></i><input id="rcorners2" size="15" type="text"
-					name="studentAddress.city" /> 
-					
-				<%-- <form:errors path="student1.studentAddress.city" cssClass="error" /> --%>
-					<i><spring:message
-						code="label.street" /></i><input id="rcorners2" size="15" type="text"
-					name="studentAddress.street" /> 
-					
-				<%-- <form:errors path="student1.studentAddress.street" cssClass="error" /> --%>
-					<i><spring:message
-						code="label.pincode" /></i><input id="rcorners2" size="15"
-					type="text" name="studentAddress.pincode" />
-					
-				<%-- <form:errors path="student1.studentAddress.pincode" cssClass="error" /> --%>
-			</p>
+
+				<form:errors path="student1.studentAddress.country" cssClass="error" />
+				<i><spring:message code="label.city" /></i><input id="rcorners2"
+					size="15" type="text" name="studentAddress.city" />
+
+				<form:errors path="student1.studentAddress.city" cssClass="error" />
+				<i><spring:message code="label.street" /></i><input id="rcorners2"
+					size="15" type="text" name="studentAddress.street" />
+
+				<form:errors path="student1.studentAddress.street" cssClass="error" />
+				<i><spring:message code="label.pincode" /></i><input id="rcorners2"
+					size="15" type="text" name="studentAddress.pincode" />
+
+				<form:errors path="student1.studentAddress.pincode" cssClass="error" />
+			</p> 
 			<table>
 				<tr>
 					<td>Image</td>
@@ -108,17 +110,19 @@
 					</td>
 
 				</tr>
-				
+
 
 				<tr>
 					<td>Enter above Image text</td>
 					<td><input id="rcorners1" type="text" name="captcha" /></td>
 				</tr>
-				</table>
-				
-					<td><form:errors path="student1.captcha" cssClass="error" /></td>
-				<div style="color:red"><td>${msg } </td></div>
-			 
+			</table>
+
+			<td><form:errors path="student1.captcha" cssClass="error" /></td>
+			<div style="color: red">
+				<td>${msg }</td>
+			</div>
+
 			<p>
 				<spring:message code="label.submit.admissionform"
 					var="labelsubmitAdmissionForm"></spring:message>

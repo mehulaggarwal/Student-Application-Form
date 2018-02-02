@@ -33,10 +33,10 @@ public class CaptchaGenServlet extends HttpServlet {
 		captchaStr = CaptchaUtil.generateCaptchaTextMethod2(6);
 		
 		try{
-		int width = 100, height = 40;
+		int width = 200, height = 70;
 		Color bg = new Color(0, 255, 255);
 		Color fg = new Color(0, 100, 0);
-		Font font = new Font("Arial", Font.BOLD, 20);
+		Font font = new Font("Arial", Font.BOLD,38);
      
 		BufferedImage cpimg = new BufferedImage(width, height, BufferedImage.OPAQUE);
 		Graphics g = cpimg.createGraphics();
@@ -44,7 +44,7 @@ public class CaptchaGenServlet extends HttpServlet {
 		g.setColor(bg);
 		g.fillRect(0, 0, width, height);
 		g.setColor(fg);
-		g.drawString(captchaStr, 10, 25);
+		g.drawString(captchaStr,32,42);
 
 		HttpSession session = request.getSession(true);
 		session.setAttribute("CAPTCHA", captchaStr);

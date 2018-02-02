@@ -8,6 +8,10 @@
 	<h2>detail submitted by you:</h2>
 
 	<table>
+	<tr>
+			<td>Student Roll No. :</td>
+			<td>${student1.studentRollNo}</td>
+		</tr>
 		<tr>
 			<td>Student Name :</td>
 			<td>${student1.studentName}</td>
@@ -25,10 +29,15 @@
 			<td>${student1.studentDOB}</td>
 		</tr>
 		<tr>
+		   <td>Student Password :</td>
+		   <td>${student1.password }</td>
+		</tr>
+		<%-- <tr>
 			<td>Student Skills :</td>
 			<td>${student1.studentSkills}</td>
-		</tr>
-		<tr>
+		</tr> --%>
+		
+		<%-- <tr>
 			<td>Student Address :</td>
 		</tr>
 		<tr>
@@ -42,7 +51,7 @@
 		</tr>
 		<tr>
 			<td>pincode : ${student1.studentAddress.pincode }</td>
-		</tr>
+		</tr> --%>
 
 	</table>
 
