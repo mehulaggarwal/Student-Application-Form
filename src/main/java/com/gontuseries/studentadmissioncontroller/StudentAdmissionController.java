@@ -82,12 +82,13 @@ public class StudentAdmissionController {
 		ModelAndView model = new ModelAndView("AdmissionSuccess");
 		return model;
 	}
+
 	@RequestMapping(value="/login.html",method=RequestMethod.POST)
 	public ModelAndView LoginForm(@ModelAttribute("student1") Student student1)
 	{
 		Student student2=new Student();
 		student2=studentService.find(student1.getStudentRollNo());
-		System.out.println(student2.getPassword());
+	//	System.out.println(student2.getPassword());
 		System.out.println(student1.getPassword());
 		if(student2==null)
 		{

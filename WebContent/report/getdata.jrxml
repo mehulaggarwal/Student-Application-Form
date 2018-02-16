@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="getdata" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f5b2bed-5940-4b19-be97-53db11fd38e0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString language="SQL">
+		<![CDATA[select * from studentinformation]]>
+	</queryString>
+	<field name="studentRollNo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="studentRollNo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentinformation"/>
+	</field>
+	<field name="password" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="password"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentinformation"/>
+	</field>
+	<field name="studentDOB" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="studentDOB"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentinformation"/>
+	</field>
+	<field name="studentHobby" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="studentHobby"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentinformation"/>
+	</field>
+	<field name="studentMobile" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="studentMobile"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentinformation"/>
+	</field>
+	<field name="studentName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="studentName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="studentinformation"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement key="" x="130" y="10" width="260" height="69" uuid="26f168c0-585e-4319-b0c1-3bf18199ec6b"/>
+				<box topPadding="25" leftPadding="50"/>
+				<textElement textAlignment="Left">
+					<font fontName="Tahoma"/>
+				</textElement>
+				<text><![CDATA[STUDENT'S INFORMATION]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="65" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="8702c38e-3ba3-47da-92af-ffd0903ab46e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c5ded4d6-8ce5-406c-8701-3d266f312c09"/>
+				</reportElement>
+				<text><![CDATA[studentRollNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="30" uuid="f80a3fd9-71a6-49c3-86c3-730ca14c5a50">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="01b157c5-5827-4e8c-9db4-1e7c6bc77c18"/>
+				</reportElement>
+				<text><![CDATA[studentDOB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="30" uuid="dfcbe24c-570e-41dd-80f1-a204c1d93780">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="184002ef-6d42-4230-9ea8-be7a1576ca40"/>
+				</reportElement>
+				<text><![CDATA[studentHobby]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="382" y="0" width="100" height="30" uuid="458902f9-6f26-4125-89b0-79bc2c934aeb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="02c09d35-5457-4ada-bea8-c22a103aea25"/>
+				</reportElement>
+				<text><![CDATA[studentMobile]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="0" width="100" height="30" uuid="9fb642cc-5ed8-424a-a5e7-4f9d219d02ad">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cb93d92a-c5c5-443a-9890-26c57d44e7de"/>
+				</reportElement>
+				<text><![CDATA[studentName]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="4ce3aa48-283c-481e-b678-372c98fea337">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c5ded4d6-8ce5-406c-8701-3d266f312c09"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{studentRollNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="100" height="30" uuid="da5ef69a-f9f1-4c0d-8575-3988b9a5b035">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="01b157c5-5827-4e8c-9db4-1e7c6bc77c18"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{studentDOB}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="0" width="100" height="30" uuid="c83dbb4e-a68e-4b5d-a2d0-87e1be4a9d1a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="184002ef-6d42-4230-9ea8-be7a1576ca40"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{studentHobby}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="30" uuid="4f02fffc-e9d6-4427-a673-2ffe54243218">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="02c09d35-5457-4ada-bea8-c22a103aea25"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{studentMobile}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="100" height="30" uuid="f2c4145d-d2e8-4d15-ab8a-f19ddf5e63b9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cb93d92a-c5c5-443a-9890-26c57d44e7de"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
